@@ -22,6 +22,7 @@ if(isset($_POST['sub'])){
       
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="edit.css">
         <title></title>
     </head>
     <body>
@@ -45,7 +46,13 @@ if(isset($_POST['sub'])){
                     <td>
                         <input type="submit" name="sub" value="submit">
                     </td>
+                    <td>
+                        <button><a href="reg.php">Registre-se</a></button>
+                    </td>
                 </tr>
+                
+                
+            
             </table>
     </body>
 </html>
