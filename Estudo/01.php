@@ -22,7 +22,7 @@ session_start();
 // Set session variables
 $_SESSION["favcolor"] = "red";
 $_SESSION["favanimal"] = "dog";
-$_SESSION["Nome"] = "Mike";
+$_SESSION["Nome"] = "Vitor";
 echo "Session variables are set.";
 ?>
 
