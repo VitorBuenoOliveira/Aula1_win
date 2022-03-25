@@ -1,12 +1,11 @@
 <?php
 include 'connect.php';
-//include 'checkLogin.php';
 if(isset($_POST['sub'])){
     $t=$_POST['text'];
 
     //$i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
-    $i= "insert into city (nameCity) values ('Monte mor')";
-    mysqli_query($con, $i)
+    //$i= "insert into city (nameCity) values ('Monte mor')";
+    mysqli_query($con, $i);
 }
 ?>
 
@@ -17,7 +16,7 @@ if(isset($_POST['sub'])){
     </head>
     <body>
         <form method="POST" enctype="multipart/form-data">
-        <table>
+            <table>
                 <tr>
                     <td>
                         Name
