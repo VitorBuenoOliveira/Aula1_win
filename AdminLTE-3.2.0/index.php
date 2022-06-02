@@ -1,6 +1,11 @@
 <?php
-include "connect.php";
+include '../connect.php';
+$s="select*from reg where id='$_SESSION[id]'";
+$qu= mysqli_query($con, $s);
+$sim=mysqli_fetch_assoc($qu);
 
+$com="SELECT count(id) as 'total'from reg";
+$querry=mysqli_query($con,$com);
 
 if(isset($_POST['sub'])){
     $u=$_POST['user'];
@@ -16,13 +21,9 @@ if(isset($_POST['sub'])){
        echo 'username or password does not exist';
    }
   
-   $p = "SELECT COUNT(id)
-   FROM reg";
+
    
 }
-
-$p = "SELECT COUNT(id)
-FROM reg";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -211,10 +212,10 @@ FROM reg";
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../<?php echo $sim['image'] ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?php echo $sim['username']?></a>
         </div>
       </div>
 
@@ -902,10 +903,11 @@ FROM reg";
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                
-                <h3><?php?></h3>
-
-                <p>New Orders</p>
+                <?php $a = 0; 
+                $f = $querry->fetch_assoc();
+                ?>
+                <h3><?php echo $f['total'];?></h3>
+                <p>Users count</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>

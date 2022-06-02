@@ -53,5 +53,6 @@ echo $f['image'];?>" width="100px" height="100px">
 <a href="delete.php">Delete</a>
 <a href="logout.php">logout</a>
 <a href="reg_city.php">Cityreg</a>
+<a href="AdminLTE-3.2.0/index.php">Dashboard</a>
     </body>
 </html>

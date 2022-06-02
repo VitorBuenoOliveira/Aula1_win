@@ -14,7 +14,7 @@ include 'connect.php';
 <?php
 $sq="select * from reg";
 $qu=mysqli_query($con,$sq);
-while($f=  mysqli_fetch_assoc($qu)){
+while($f =  mysqli_fetch_assoc($qu)){
     ?>
     <tr>
         <td>
